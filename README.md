@@ -1,2 +1,2 @@
 # ellner.github.io
-Home page for Stephen Ellner, Cornell University 
+Home page for Prof. Stephen Ellner, Cornell University  
