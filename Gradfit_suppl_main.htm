@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+  <TITLE>Ecological Archvies A/E/M000-000</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" >
+<h3><B><font face="Times New Roman, Times, serif">Stephen P. Ellner,
+Yodit Seifu, and Robert H. Smith. 200?. Fitting population dynamic models
+to time series data by gradient matching <I>Ecology </I> 
+  VOL: pp-pp</font></B><font face="Times New Roman, Times, serif">.</font></h3>
+
+<H3><font face="Times New Roman, Times, serif">Supplement</font></H3>
+<BLOCKQUOTE> 
+  <h3><font face="Times New Roman, Times, serif"><B> R source code, examples, and
+documentation for the main fitting functions <I><br>
+    Ecological Archives</I> A/E/M000-000-S1</B>.<BR CLEAR="ALL">
+</font></h3>
+</BLOCKQUOTE>
+<P><font face="Times New Roman, Times, serif"><a href="../../../copyright.htm"><b>Copyright</b></a></font></P>
+<HR ALIGN=LEFT>
+<blockquote> 
+  <h3><font face="Times New Roman, Times, serif"><B><a href="#anchorAuthors">Authors</a></B> 
+    <BR CLEAR="ALL">
+    <B><a href="#anchorFilelist">File list</a></B><BR CLEAR="ALL">
+    <B><a href="#anchorDescription" target="_self">Description</a></B><BR CLEAR="ALL">
+    <B> <a href="files.htm">Download files</a></B></font></h3>
+</blockquote>
+<HR ALIGN=LEFT>
+<h3><font face="Times New Roman, Times, serif"><A
+NAME="anchorAuthors"></A><B>Author</B></font></h3>
+<BLOCKQUOTE> 
+ <P><font face="Times New Roman, Times, serif">
+Stephen P. Ellner, Cornell University<BR CLEAR="ALL">
+Department of Ecology and Evolutionary Biology <BR CLEAR="ALL">
+Ithaca NY 14853-2701 USA<BR CLEAR="ALL">
+spe2@cornell.edu<BR CLEAR="ALL">
+</font></P>
+
+
+</BLOCKQUOTE>
+<HR ALIGN=LEFT>
+<h3><font face="Times New Roman, Times, serif"><a
+name="anchorFilelist"></a><B>File list</B></font></h3>
+<BLOCKQUOTE>
+<FONT FACE="Courier New"><a href="files/GradFuncs.zip">GradFuncs.zip</a></FONT> - 
+    Zip archive of all files <BR>
+<FONT FACE="Courier New"><a href="files/Readme.txt">Readme.txt</a></FONT> - 
+    Readme file for the Zip archive <BR>
+<FONT FACE="Courier New"><a href="files/GradFuncs.R">GradFuncs.R</a></FONT> - 
+    <B>R</B> source code for the fitting functions. Requires the <B>MASS</B> and <B>quadprog</B> libraries
+	and version 1.1 or higher of <B>R</B> <BR>
+<FONT FACE="Courier New"><a href="files/TestGradFuncs.R">TestGradFuncs.R</a></FONT> - 
+    Examples of using the main fitting functions, extensively commented. Requires
+the <B>mgcv</B> library. <BR>
+<FONT FACE="Courier New"><a href="files/GradFuncs.doc">GradFuncs.doc</a></FONT> - 
+    Documentation in MS Word for Windows format <BR>
+<FONT FACE="Courier New"><a href="files/GradFuncs.pdf">GradFuncs.pdf</a></FONT> - 
+    Documentation in PDF format <BR>
+<FONT FACE="Courier New"><a href="files/Nichadults.txt">Nichadults.txt</a></FONT> - 
+    Data file used by the examples: every-other-day count of adult numbers in series "I"
+from Nicholson (1957). The example code assumes that this file is
+sitting in <FONT FACE="Courier New">C:\\GradFuncs</FONT>; if you put it anywhere else you will 
+need to edit the example code appropriately<BR>
+ 
+</BLOCKQUOTE>
+<p><font face="Times New Roman, Times, serif" size="+1"><b><a name="anchorDescription"></a>Description</b></font></p>
+<font face="Times New Roman, Times, serif">
+A set of <B>R</B> functions for the main fitting procedures used in the paper, including
+functions for smoothing the time series to estimate its gradient, and to fit univariate and
+additive bivariate regression spline models with and without constraints. 
+The examples file <FONT FACE="Courier New">
+TestGradFuncs.R </FONT> illustrates how the functions are used, including an
+example of a <B> SIMEX </B> bias-correction for measurement errors. 
+The code was developed originally under version
+1.1 of <B>R</B> and has been tested under version 1.3.0 with associated library versions, on PCs 
+running Windows NT 4.0 and Windows 2000 Professional. Please note that this is <i>not</i> a library; 
+the script file <FONT FACE="Courier New">GradFuncs.R</FONT> must be <FONT FACE="Courier New">source</FONT>'d 
+to make the functions available in the current session. There is also no online help provided. 
+<p> Not all of the functions run under <B>Splus</B>, though
+though adapting them to do so should not be too difficult. The main <B>R</B>-specific 
+feature is the use of <FONT FACE="Courier New">optim()</FONT> with 
+<FONT FACE="Courier New">method = "Nelder-Mead"</FONT> to fit the two smoothing parameters 
+for the ridge functions in additive models by minimizing the <b>GCV</b> score; 
+a call to <FONT FACE="Courier New"> nlmin()</FONT> could be substituted. 
+Also, one commented-out line near the top of <FONT FACE="Courier New"> GradFuncs.R </FONT>needs to 
+have the "#" removed so that the <B>Splus</B> <FONT FACE="Courier New">solve.matrix()</FONT>  is called in place 
+of <FONT FACE="Courier New">solve()</FONT>. Several of the examples use plotting parameters specific 
+to <B>R</B>.
+</font>
+<P align="center"><b><font size="+1"><font size="-2" face="Arial, Helvetica, sans-serif"><a href="../../../../esapubs/default.htm" target="_top">ESA 
+  Publications</a> | <a href="../../../default.htm" target="_top">Ecological Archives</a> 
+  | <a href="../../../copyright.htm" target="_self"> Permissions</a> | <a href="../../../../esapubs/archive/archive.htm#Cit" target="_self">Citation</a> 
+  | <a href="../../../../esapubs/contacts.htm#Arc" target="_self"> Contacts</a></font></font></b> 
+</BODY>
+</HTML>
